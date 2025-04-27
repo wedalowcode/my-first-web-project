@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>课程表</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>课程表</h1>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">时间</th>
+          <th scope="col">星期一</th>
+          <th scope="col">星期二</th>
+          <th scope="col">星期三</th>
+          <th scope="col">星期四</th>
+          <th scope="col">星期五</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">第一节<br />(8:00-9:00)</th>
+          <td>数学</td>
+          <td>语文</td>
+          <td>英语</td>
+          <td>物理</td>
+          <td>化学</td>
+        </tr>
+        <tr>
+          <th scope="row">第二节<br />(9:10-10:10)</th>
+          <td>语文</td>
+          <td>数学</td>
+          <td>物理</td>
+          <td>英语</td>
+          <td>生物</td>
+        </tr>
+        <tr>
+          <td colspan="6">午休 (12:00-14:00)</td>
+        </tr>
+        <tr>
+          <th scope="row">第三节<br />(14:00-15:00)</th>
+          <td>英语</td>
+          <td rowspan="2">体育</td>
+          <td>数学</td>
+          <td>语文</td>
+          <td>历史</td>
+        </tr>
+        <tr>
+          <th scope="row">第四节<br />(15:10-16:10)</th>
+          <td>物理</td>
+          <td>化学</td>
+          <td>生物</td>
+          <td>地理</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

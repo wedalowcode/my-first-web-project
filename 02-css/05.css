@@ -1,0 +1,45 @@
+/* 通用样式 */
+.section {
+    height: 400px;
+    margin: 20px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><rect width="200" height="200" fill="%234a90e2"/><circle cx="100" cy="100" r="80" fill="%23f5a623"/><polygon points="100,40 130,140 40,80 160,80 70,140" fill="%23ffffff"/></svg>');
+    background-color: #333;
+}
+
+.section h2 {
+    margin-top: 160px;
+    font-size: 24px;
+}
+
+.section p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* 不重复背景 */
+.no-repeat {
+    background-repeat: no-repeat;
+}
+
+/* 居中背景 */
+.center {
+    background-position: center center;
+}
+
+/* 覆盖背景 */
+.cover {
+    background-size: cover;
+}
+
+/* 包含背景 */
+.contain {
+    background-size: contain;
+}
+
+/* 固定背景 */
+.fixed {
+    background-attachment: fixed;
+}

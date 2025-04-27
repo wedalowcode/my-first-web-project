@@ -1,0 +1,19 @@
+.box {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 5px solid blue;
+    margin: 15px;
+    background-color: lightblue;
+  }
+  
+  .default-box {
+    /* box-sizing: content-box; (默认值) */
+    /* 实际宽度 = 200 + 20*2 + 5*2 = 250px */
+  }
+  
+  .border-box {
+    box-sizing: border-box;
+    /* 实际宽度 = 200px */
+    background-color: lightgreen;
+  }

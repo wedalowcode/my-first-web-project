@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多媒体与嵌入示例</title>
+    <style>
+      .highlight {
+        color: red;
+        font-weight: bold;
+      }
+      .box {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>多媒体与嵌入内容示例</h1>
+
+    <!-- 文本内容部分 -->
+    <section>
+      <div class="box">
+        <h3>关于我们</h3>
+        <p>
+          这是一段介绍文字，其中
+          <span class="highlight">重要内容</span> 会被特别标注。
+          我们致力于为用户提供 <span class="highlight">最好的服务</span>。
+        </p>
+      </div>
+
+      <div class="box">
+        <h3>引用内容</h3>
+        <iframe
+          title="引用示例"
+          src="./05.html"
+          width="100%"
+          height="200"
+          sandbox="allow-same-origin allow-scripts"
+        >
+        </iframe>
+
+    
+      </div>
+    </section>
+  </body>
+</html>

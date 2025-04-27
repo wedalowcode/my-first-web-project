@@ -1,0 +1,66 @@
+.article-text {
+    color: #333; /* 深灰色文字 */
+    font-size: 16px; /* 字体大小 16 像素 */
+    font-family: "Microsoft YaHei", "Georgia", serif; /* 优先使用微软雅黑，然后 Georgia，最后通用衬线体 */
+    line-height: 1.7; /* 行高为字体大小的 1.7 倍 */
+    text-align: justify; /* 两端对齐 */
+    text-decoration: none; /* 无文本装饰 */
+    letter-spacing: 0.5px; /* 轻微增加字符间距 */
+}
+
+.article-text a { /* 假设段落内有链接 */
+    color: blue;
+    text-decoration: underline; /* 给链接加上下划线 */
+}
+
+.article-text a:hover {
+    color: red;
+}
+
+/* 引入思源黑体 */
+@font-face {
+    font-family: 'Noto Sans SC';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+}
+
+/* 引入思源黑体繁体中文 */
+@font-face {
+    font-family: 'Noto Sans TC';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+}
+
+/* 演示不同字体的类 */
+.font-serif {
+    font-family: serif; /* 通用衬线体 */
+}
+
+.font-sans-serif {
+    font-family: sans-serif; /* 通用无衬线体 */
+}
+
+.font-monospace {
+    font-family: monospace; /* 通用等宽字体 */
+}
+
+.font-georgia {
+    font-family: Georgia, serif; /* 指定 Georgia 字体 */
+}
+
+.font-microsoft-yahei {
+    font-family: "Microsoft YaHei", sans-serif; /* 指定微软雅黑字体 */
+}
+
+.font-noto-sc {
+    font-family: 'Noto Sans SC', sans-serif; /* 使用思源黑体简体中文 */
+}
+
+.font-noto-tc {
+    font-family: 'Noto Sans TC', sans-serif; /* 使用思源黑体繁体中文 */
+}
+
+/* 为演示段落添加一些基本样式 */
+.font-demo p {
+    margin-bottom: 10px;
+    border: 1px dashed #ccc;
+    padding: 5px;
+}

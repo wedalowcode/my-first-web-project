@@ -1,0 +1,49 @@
+/* 标签选择器：所有 p 元素 */
+p {
+    line-height: 1.6; /* 设置行高 */
+  }
+  
+  /* 类选择器：所有 class 为 section-title 的元素 */
+  .section-title {
+    font-family: 'Arial', sans-serif; /* 设置字体 */
+    border-bottom: 1px solid #ccc; /* 添加下划线 */
+  }
+  
+  /* ID 选择器：ID 为 main-content 的元素 */
+  #main-content {
+    padding: 20px; /* 设置内边距 */
+    background-color: #f9f9f9; /* 设置背景色 */
+  }
+  
+  /* 属性选择器：所有 target="_blank" 的 a 元素 */
+  a[target="_blank"] {
+    color: orange; /* 设置颜色为橙色 */
+    text-decoration: none; /* 去掉下划线 */
+  }
+  
+  /* 伪类选择器：鼠标悬停在任何链接上时 */
+  a:hover {
+    color: red; /* 颜色变为红色 */
+    text-decoration: underline; /* 添加下划线 */
+  }
+  
+  /* 后代选择器：#main-content 里的所有 li 元素 */
+  #main-content li {
+    margin-bottom: 5px; /* 设置下外边距 */
+  }
+  
+  /* 子代选择器：ul 的直接子元素 li 的第一个 */
+  ul > li:first-child {
+    font-weight: bold; /* 设置为粗体 */
+  }
+  
+  /* 相邻兄弟选择器：紧跟在 class="important" 的 h2 后面的 p */
+  h2.important + p {
+    font-style: italic; /* 设置为斜体 */
+  }
+  
+  /* 伪元素选择器：在每个列表项前添加一个小圆点 */
+  ul li::before {
+    content: "• "; /* 插入内容 */
+    color: blue;
+  }
