@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <title>CSS 引入方式示例</title>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>链接与图片示例</title>
   <style>
     body {
       font-family: sans-serif;
@@ -39,21 +40,15 @@
       color: #fff;
       border-color: #007bff;
     }
-    /* 选择 h2 元素 */
-    h2 {
-      color: blue; /* 设置文字颜色为蓝色 */
-    }
   </style>
-  <link rel="stylesheet" href="01.css">
 </head>
 <body>
   <div class="container">
     <a href="../index.html" class="back-link">返回主导航</a>
-    <h1 style="color: red;">这是用内联样式设置的红色标题</h1>
-
-  <h2>这是用内部样式表设置的蓝色标题</h2>
-
-    <p>这是用外部样式表设置的绿色段落 (见 style.css)</p>
+    <h1>欢迎！</h1>
+    <p>访问 <a href="https://www.baidu.com" target="_blank" title="百度" rel="noopener noreferrer">百度</a></p>
+    <p>这是一张可爱的猫咪图片：</p>
+    <img src="images/cat.png" alt="一只趴在地上的橘猫" width="300">
   </div>
 </body>
 </html>

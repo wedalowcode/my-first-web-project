@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>课程表</title>
     <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        margin: 2em;
+        background-color: #f4f4f4;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: #007bff;
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #007bff;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      }
+      .back-link:hover {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+      }
       table,
       th,
       td {
@@ -15,7 +50,9 @@
     </style>
   </head>
   <body>
-    <h1>课程表</h1>
+    <div class="container">
+      <a href="javascript:history.back()" class="back-link">← 返回</a>
+      <h1>课程表</h1>
     <table>
       <thead>
         <tr>
@@ -64,5 +101,6 @@
         </tr>
       </tbody>
     </table>
+    </div>
   </body>
 </html>

@@ -4,8 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>关于我 (语义化)</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        margin: 2em;
+        background-color: #f4f4f4;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 20px;
+        color: #007bff;
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #007bff;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      }
+      .back-link:hover {
+        background-color: #007bff;
+        color: #fff;
+        border-color: #007bff;
+      }
+    </style>
 </head>
 <body>
+  <div class="container">
+    <a href="../index.html" class="back-link">返回主导航</a>
     <header>
         <h1>关于 张三</h1>
         <p>Web 开发学习者 | 前端爱好者</p>
@@ -56,5 +95,6 @@
         <p>版权所有 © 2024 张三</p>
         <p>最后更新时间：2024年1月</p>
     </footer>
+  </div>
 </body>
 </html>

@@ -5,11 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML 文档</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 2em;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #007bff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #007bff;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+    </style>
     <link rel="stylesheet" href="02.css">
 </head>
 
 <body>
-    <div id="main-content">
+    <div class="container">
+        <a href="../index.html" class="back-link">返回主导航</a>
+        <div id="main-content">
         <h2 class="section-title important">章节标题 1</h2>
         <p>这是第一段文字，包含一个 <a href="#" target="_blank">外部链接</a>。</p>
         <h2 class="section-title">章节标题 2</h2>
@@ -20,6 +53,7 @@
             <li>列表项 3</li>
         </ul>
         <a href="#">内部链接</a>
+    </div>
     </div>
 </body>
 
