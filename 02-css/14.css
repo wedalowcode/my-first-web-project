@@ -1,0 +1,18 @@
+.my-button {
+    padding: 10px 20px;
+    background-color: steelblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  
+    /* 定义过渡效果 */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* 过渡背景色和变换效果，持续 0.3 秒，使用 ease 速度曲线 */
+  }
+  
+  .my-button:hover {
+    background-color: darkslateblue;
+    transform: scale(1.1); /* 悬停时放大 10% */
+  }

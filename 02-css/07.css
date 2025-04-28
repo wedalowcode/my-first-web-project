@@ -1,0 +1,12 @@
+.fixed-nav {
+    position: fixed; /* 固定定位 */
+    top: 0; /* 距离视口顶部 0px */
+    left: 0; /* 距离视口左边 0px */
+    width: 100%; /* 宽度占满 */
+    height: 50px;
+    background-color: navy;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    z-index: 100; /* 确保在最上层 */
+  }

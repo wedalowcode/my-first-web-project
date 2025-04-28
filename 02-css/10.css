@@ -1,0 +1,20 @@
+.nav-menu {
+    display: flex;
+    background-color: #333;
+    padding: 10px;
+    align-items: center; /* 垂直居中对齐（如果项目高度不同） */
+    gap: 15px; /* 设置项目间距 */
+  }
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    /* 默认 flex: 0 1 auto; */
+  }
+  .nav-item:hover {
+    background-color: #555;
+  }
+  .grow-item {
+    flex-grow: 1; /* 这个空项目会占据所有剩余空间，把后面的项推到右边 */
+  }

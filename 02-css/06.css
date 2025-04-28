@@ -1,0 +1,9 @@
+.item {
+    display: inline-block; /* 让 div 可以并排 */
+    width: 100px;
+    height: 80px;
+    background-color: lightcoral;
+    margin: 5px;
+    text-align: center;
+    line-height: 80px; /* 垂直居中 (简单方法) */
+  }

@@ -1,0 +1,20 @@
+.card {
+    position: relative; /* 父元素相对定位，作为参照物 */
+    width: 200px;
+    height: 150px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin: 20px;
+  }
+  
+  .badge {
+    position: absolute; /* 子元素绝对定位 */
+    top: -10px; /* 相对于父元素顶部向上偏移 10px */
+    right: -10px; /* 相对于父元素右侧向右偏移 10px */
+    background-color: red;
+    color: white;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+  }

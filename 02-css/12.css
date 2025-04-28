@@ -1,0 +1,27 @@
+.holy-grail-container {
+    display: grid;
+    min-height: 100vh; /* 容器至少和视口一样高 */
+    /* 定义命名的网格区域 */
+    grid-template-areas:
+      "header header header"
+      "nav    content sidebar"
+      "footer footer footer";
+    /* 定义列宽：导航固定宽，内容自适应，侧边栏固定宽 */
+    grid-template-columns: 150px 1fr 120px;
+    /* 定义行高：头部页脚自适应，中间内容区域占满剩余高度 */
+    grid-template-rows: auto 1fr auto;
+    gap: 10px; /* 网格间距 */
+  }
+  
+  /* 将 HTML 元素分配到对应的网格区域 */
+  .hg-header { grid-area: header; background-color: lightblue; }
+  .hg-nav    { grid-area: nav;    background-color: lightpink; }
+  .hg-content{ grid-area: content; background-color: lightyellow; }
+  .hg-sidebar{ grid-area: sidebar; background-color: lightgreen; }
+  .hg-footer { grid-area: footer; background-color: lightgray; }
+  
+  /* 给每个区域加点内边距方便看 */
+  .holy-grail-container > * {
+    padding: 15px;
+    text-align: center;
+  }

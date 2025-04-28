@@ -1,0 +1,23 @@
+/* 定义旋转动画 */
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3; /* 浅灰色背景圆环 */
+    border-top: 5px solid #3498db; /* 蓝色顶部圆环，形成旋转效果 */
+    border-radius: 50%; /* 使其成为圆形 */
+  
+    /* 应用动画 */
+    animation-name: spin; /* 使用名为 spin 的动画 */
+    animation-duration: 1s; /* 每次旋转持续 1 秒 */
+    animation-timing-function: linear; /* 匀速旋转 */
+    animation-iteration-count: infinite; /* 无限循环 */
+  }

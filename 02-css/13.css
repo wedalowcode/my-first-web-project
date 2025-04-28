@@ -1,0 +1,67 @@
+/* --- 默认样式 (Mobile First) --- */
+.main-nav {
+    display: flex;
+    flex-direction: column; /* 移动端：Logo 在上，链接在下 */
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column; /* 移动端：链接垂直排列 */
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .nav-links a {
+    padding: 8px;
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+  
+  .content-area {
+    display: flex;
+    flex-direction: column; /* 移动端：主内容在上，侧边栏在下 */
+  }
+  .main-content, .sidebar {
+    padding: 15px;
+  }
+  .sidebar {
+    background-color: lightgoldenrodyellow;
+  }
+  
+  /* --- 平板及以上样式 (Tablet and Up) --- */
+  @media (min-width: 768px) {
+    .main-nav {
+      flex-direction: row; /* 平板：水平排列 */
+      justify-content: space-between; /* Logo 左对齐，链接右对齐 */
+    }
+    .nav-links {
+      flex-direction: row; /* 平板：链接水平排列 */
+      width: auto;
+      margin-top: 0;
+    }
+    .nav-links a {
+      width: auto;
+      border-bottom: none;
+      margin-left: 15px;
+    }
+  
+    .content-area {
+      flex-direction: row; /* 平板：主内容和侧边栏并排 */
+      gap: 20px;
+    }
+    .main-content {
+      flex-grow: 1; /* 主内容占据更多空间 */
+    }
+    .sidebar {
+      flex-basis: 250px; /* 侧边栏固定宽度 */
+      flex-shrink: 0; /* 不缩小 */
+    }
+  }
