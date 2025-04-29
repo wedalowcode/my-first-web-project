@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM 操作示例</title>
+  <style>
+    .highlight { background-color: yellow; font-weight: bold; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h1 id="main-title">DOM 操作</h1>
+  <p id="text-to-change">这是初始文本。</p>
+  <button id="change-text-btn">改变文本</button>
+  <button id="toggle-style-btn">切换样式</button>
+  <hr>
+  <img id="my-image" src="https://placehold.co/200x100/007bff/ffffff?text=Image+1" alt="占位图" width="200">
+  <br>
+  <input type="text" id="image-url-input" placeholder="输入新图片 URL">
+  <button id="change-image-btn">改变图片</button>
+  <hr>
+  <div id="container">
+    <p>第一个子元素</p>
+  </div>
+  <button id="add-element-btn">添加元素</button>
+  <button id="remove-element-btn">移除最后一个元素</button>
+
+  <script src="07.js"></script>
+</body>
+</html>
