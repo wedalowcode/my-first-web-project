@@ -1,0 +1,21 @@
+{
+  "mcp_servers": [
+    {
+      "name": "mcp.config.usrlocalmcp.GitHub",
+      "description": "GitHub MCP Server for repository management",
+      "enabled": true,
+      "config": {
+        "owner": "wedalowcode",
+        "repo": "my-first-web-project"
+      }
+    },
+    {
+      "name": "mcp.config.usrlocalmcp.Git",
+      "description": "Git MCP Server for local repository operations",
+      "enabled": true,
+      "config": {
+        "repository_path": "d:/js-fullstack/my-first-web-project"
+      }
+    }
+  ]
+}
