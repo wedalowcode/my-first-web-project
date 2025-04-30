@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,70 +12,92 @@
             margin: 2em;
             background-color: #f4f4f4;
         }
+
         .container {
             max-width: 800px;
             margin: auto;
             background: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             color: #333;
             text-align: center;
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
         }
+
         /* Style for the chapter header */
         .chapter-header {
             color: #555;
             margin-top: 30px;
             border-bottom: 1px solid #eee;
             padding-bottom: 5px;
-            cursor: pointer; /* Indicates it's clickable */
-            display: flex; /* Use flex to align title and indicator */
-            justify-content: space-between; /* Space between title and indicator */
-            align-items: center; /* Vertically align items */
-            transition: color 0.3s ease; /* Smooth color transition on hover */
+            cursor: pointer;
+            /* Indicates it's clickable */
+            display: flex;
+            /* Use flex to align title and indicator */
+            justify-content: space-between;
+            /* Space between title and indicator */
+            align-items: center;
+            /* Vertically align items */
+            transition: color 0.3s ease;
+            /* Smooth color transition on hover */
         }
+
         .chapter-header:hover {
-            color: #007bff; /* Change color on hover */
+            color: #007bff;
+            /* Change color on hover */
         }
+
         /* Indicator for expanded/collapsed state */
         .chapter-header .indicator {
             font-size: 1.2em;
             font-weight: bold;
             margin-left: 10px;
-            transition: transform 0.3s ease; /* Smooth rotation transition */
+            transition: transform 0.3s ease;
+            /* Smooth rotation transition */
         }
+
         /* Rotate indicator when chapter is expanded */
         .chapter.expanded .chapter-header .indicator {
-             transform: rotate(90deg); /* Example: rotate for arrow */
+            transform: rotate(90deg);
+            /* Example: rotate for arrow */
         }
 
 
         ul {
             list-style: none;
             padding: 0;
-            margin-top: 10px; /* Add some space above the list */
+            margin-top: 10px;
+            /* Add some space above the list */
         }
+
         li {
-            margin-bottom: 8px; /* Slightly less margin for list items */
+            margin-bottom: 8px;
+            /* Slightly less margin for list items */
             background-color: #e9e9e9;
             border-radius: 4px;
-            overflow: hidden; /* Ensures border-radius works on content */
+            overflow: hidden;
+            /* Ensures border-radius works on content */
         }
+
         a {
             text-decoration: none;
             color: #007bff;
             display: block;
             padding: 10px 15px;
-            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+            transition: background-color 0.3s ease, color 0.3s ease;
+            /* Smooth transitions */
         }
+
         a:hover {
             background-color: #dcdcdc;
             color: #0056b3;
         }
+
         .chapter-path {
             font-size: 0.9em;
             color: #777;
@@ -83,27 +106,37 @@
 
         /* Content area for each chapter (the ul) */
         .chapter-content {
-            display: none; /* Hidden by default */
-            overflow: hidden; /* Hide overflowing content during transition */
-            transition: max-height 0.5s ease-out; /* Smooth height transition (simulated) */
-            max-height: 0; /* Initial state for transition */
+            display: none;
+            /* Hidden by default */
+            overflow: hidden;
+            /* Hide overflowing content during transition */
+            transition: max-height 0.5s ease-out;
+            /* Smooth height transition (simulated) */
+            max-height: 0;
+            /* Initial state for transition */
         }
 
         /* Show content when chapter is expanded */
         .chapter.expanded .chapter-content {
-            display: block; /* Show the list */
-            max-height: 1000px; /* A large enough value to allow expansion */
+            display: block;
+            /* Show the list */
+            max-height: 1000px;
+            /* A large enough value to allow expansion */
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>项目内容导航</h1>
 
-        <div class="chapter expanded"> <h2 class="chapter-header">
+        <div class="chapter expanded">
+            <h2 class="chapter-header">
                 <span>第一章：HTML 基础示例</span>
-                <span class="indicator">></span> </h2>
-            <ul class="chapter-content"> <li><a href="01-html/01.html">第 1 节 <span class="chapter-path">(01-html/01.html)</span></a></li>
+                <span class="indicator">></span>
+            </h2>
+            <ul class="chapter-content">
+                <li><a href="01-html/01.html">第 1 节 <span class="chapter-path">(01-html/01.html)</span></a></li>
                 <li><a href="01-html/02.html">第 2 节 <span class="chapter-path">(01-html/02.html)</span></a></li>
                 <li><a href="01-html/03.html">第 3 节 <span class="chapter-path">(01-html/03.html)</span></a></li>
                 <li><a href="01-html/04.html">第 4 节 <span class="chapter-path">(01-html/04.html)</span></a></li>
@@ -113,10 +146,13 @@
             </ul>
         </div>
 
-        <div class="chapter"> <h2 class="chapter-header">
+        <div class="chapter">
+            <h2 class="chapter-header">
                 <span>第二章：CSS 样式示例</span>
-                 <span class="indicator">></span> </h2>
-            <ul class="chapter-content"> <li><a href="02-css/01.html">第 1 节 <span class="chapter-path">(02-css/01.html)</span></a></li>
+                <span class="indicator">></span>
+            </h2>
+            <ul class="chapter-content">
+                <li><a href="02-css/01.html">第 1 节 <span class="chapter-path">(02-css/01.html)</span></a></li>
                 <li><a href="02-css/02.html">第 2 节 <span class="chapter-path">(02-css/02.html)</span></a></li>
                 <li><a href="02-css/03.html">第 3 节 <span class="chapter-path">(02-css/03.html)</span></a></li>
                 <li><a href="02-css/04.html">第 4 节 <span class="chapter-path">(02-css/04.html)</span></a></li>
@@ -134,33 +170,72 @@
             </ul>
         </div>
 
-        <div class="chapter"> <h2 class="chapter-header">
+        <div class="chapter">
+            <h2 class="chapter-header">
                 <span>第三章：JavaScript 示例</span>
-                 <span class="indicator">></span> </h2>
-            <ul class="chapter-content"> 
-                <li><a href="03-javascript/01.html">第 1 节 <span class="chapter-path">(03-javascript/01.html)</span></a></li>
-                <li><a href="03-javascript/02.html">第 2 节 <span class="chapter-path">(03-javascript/02.html)</span></a></li>
-                <li><a href="03-javascript/03.html">第 3 节 <span class="chapter-path">(03-javascript/03.html)</span></a></li>
-                <li><a href="03-javascript/04.html">第 4 节 <span class="chapter-path">(03-javascript/04.html)</span></a></li>
-                <li><a href="03-javascript/05.html">第 5 节 <span class="chapter-path">(03-javascript/05.html)</span></a></li>
-                <li><a href="03-javascript/06.html">第 6 节 <span class="chapter-path">(03-javascript/06.html)</span></a></li>
-                <li><a href="03-javascript/07.html">第 7 节 <span class="chapter-path">(03-javascript/07.html)</span></a></li>
-                <li><a href="03-javascript/08.html">第 8 节 <span class="chapter-path">(03-javascript/08.html)</span></a></li>
-                <li><a href="03-javascript/09.html">第 9 节 <span class="chapter-path">(03-javascript/09.html)</span></a></li>
-                <li><a href="03-javascript/10.html">第 10 节 <span class="chapter-path">(03-javascript/10.html)</span></a></li> 
-                <li><a href="03-javascript/11.html">第 11 节 <span class="chapter-path">(03-javascript/11.html)</span></a></li>
-                <li><a href="03-javascript/12.html">第 12 节 <span class="chapter-path">(03-javascript/12.html)</span></a></li>
+                <span class="indicator">></span>
+            </h2>
+            <ul class="chapter-content">
+                <li><a href="03-javascript/01.html">第 1 节 <span class="chapter-path">(03-javascript/01.html)</span></a>
+                </li>
+                <li><a href="03-javascript/02.html">第 2 节 <span class="chapter-path">(03-javascript/02.html)</span></a>
+                </li>
+                <li><a href="03-javascript/03.html">第 3 节 <span class="chapter-path">(03-javascript/03.html)</span></a>
+                </li>
+                <li><a href="03-javascript/04.html">第 4 节 <span class="chapter-path">(03-javascript/04.html)</span></a>
+                </li>
+                <li><a href="03-javascript/05.html">第 5 节 <span class="chapter-path">(03-javascript/05.html)</span></a>
+                </li>
+                <li><a href="03-javascript/06.html">第 6 节 <span class="chapter-path">(03-javascript/06.html)</span></a>
+                </li>
+                <li><a href="03-javascript/07.html">第 7 节 <span class="chapter-path">(03-javascript/07.html)</span></a>
+                </li>
+                <li><a href="03-javascript/08.html">第 8 节 <span class="chapter-path">(03-javascript/08.html)</span></a>
+                </li>
+                <li><a href="03-javascript/09.html">第 9 节 <span class="chapter-path">(03-javascript/09.html)</span></a>
+                </li>
+                <li><a href="03-javascript/10.html">第 10 节 <span class="chapter-path">(03-javascript/10.html)</span></a>
+                </li>
+                <li><a href="03-javascript/11.html">第 11 节 <span class="chapter-path">(03-javascript/11.html)</span></a>
+                </li>
+                <li><a href="03-javascript/12.html">第 12 节 <span class="chapter-path">(03-javascript/12.html)</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="chapter">
+            <h2 class="chapter-header">
+
+                <span>第四章：TypeScript 示例</span>
+                <span class="indicator">></span>
+            </h2>
+            <ul class="chapter-content">
+                <li><a href="04-typescript/01.html">第 1 节 <span class="chapter-path">(04-typescript/01.html)</span></a>
+                </li>
+                <li><a href="04-typescript/02.html">第 2 节 <span class="chapter-path">(04-typescript/02.html)</span></a>
+                </li>
+                <li><a href="04-typescript/03.html">第 3 节 <span class="chapter-path">(04-typescript/03.html)</span></a>
+                </li>
+                <li><a href="04-typescript/04.html">第 4 节 <span class="chapter-path">(04-typescript/04.html)</span></a>
+                </li>
+                <li><a href="04-typescript/05.html">第 5 节 <span class="chapter-path">(04-typescript/05.html)</span></a>
+                </li>
+                <li><a href="04-typescript/06.html">第 6 节 <span class="chapter-path">(04-typescript/06.html)</span></a>
+                </li>
+                <li><a href="04-typescript/07.html">第 7 节 <span class="chapter-path">(04-typescript/07.html)</span></a>
+                </li>
+                <li><a href="04-typescript/08.html">第 8 节 <span class="chapter-path">(04-typescript/08.html)</span></a>
+                </li>
             </ul>
         </div>
 
-        </div>
+    </div>
 
     <script>
         // Get all elements with the class 'chapter-header'
         const chapterHeaders = document.querySelectorAll('.chapter-header');
 
         chapterHeaders.forEach(header => {
-            header.addEventListener('click', function() {
+            header.addEventListener('click', function () {
                 // Find the parent element with class 'chapter'
                 const chapterDiv = this.closest('.chapter');
 
@@ -180,11 +255,12 @@
         // This ensures the max-height transition works correctly on page load for the default open chapter
         const firstChapterContent = document.querySelector('.chapter.expanded .chapter-content');
         if (firstChapterContent) {
-             // Setting a large max-height value ensures it can expand
-             firstChapterContent.style.maxHeight = '1000px'; // Or a value larger than its potential height
+            // Setting a large max-height value ensures it can expand
+            firstChapterContent.style.maxHeight = '1000px'; // Or a value larger than its potential height
         }
 
     </script>
 
 </body>
+
 </html>
