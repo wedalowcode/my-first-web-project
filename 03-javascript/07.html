@@ -1,30 +1,136 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>DOM 操作示例</title>
-  <style>
-    .highlight { background-color: yellow; font-weight: bold; }
-    .hidden { display: none; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 操作示例</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Prism.js for code highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="../css/lesson.css">
 </head>
 <body>
-  <h1 id="main-title">DOM 操作</h1>
-  <p id="text-to-change">这是初始文本。</p>
-  <button id="change-text-btn">改变文本</button>
-  <button id="toggle-style-btn">切换样式</button>
-  <hr>
-  <img id="my-image" src="https://placehold.co/200x100/007bff/ffffff?text=Image+1" alt="占位图" width="200">
-  <br>
-  <input type="text" id="image-url-input" placeholder="输入新图片 URL">
-  <button id="change-image-btn">改变图片</button>
-  <hr>
-  <div id="container">
-    <p>第一个子元素</p>
-  </div>
-  <button id="add-element-btn">添加元素</button>
-  <button id="remove-element-btn">移除最后一个元素</button>
+    <div class="lesson-container">
+        <!-- 课程头部 -->
+        <div class="lesson-header">
+            <a href="../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> 返回主页
+            </a>
+            <h1 class="lesson-title">DOM 操作示例</h1>
+            <p class="lesson-description">JavaScript编程的第7节内容，学习DOM 操作示例相关知识</p>
+        </div>
+        
+        <!-- 课程内容 -->
+        <div class="lesson-content">
+            <!-- 选项卡 -->
+            <div class="tabs">
+                <button class="tab active" data-target="result-panel">效果展示</button>
+                <button class="tab" data-target="code-panel">查看代码</button>
+                <button class="tab" data-target="explanation-panel">详细解释</button>
+            </div>
+            
+            <!-- 选项卡内容 -->
+            <div class="tab-content">
+                <!-- 效果展示面板 -->
+                <div id="result-panel" class="panel active">
+                    <div class="result-container">
+                        <h1 id="main-title">DOM 操作</h1>
+<p id="text-to-change">这是初始文本。</p>
+<button id="change-text-btn">改变文本</button>
+<button id="toggle-style-btn">切换样式</button>
+<hr/>
+<img alt="占位图" id="my-image" src="https://placehold.co/200x100/007bff/ffffff?text=Image+1" width="200"/>
+<br/>
+<input id="image-url-input" placeholder="输入新图片 URL" type="text"/>
+<button id="change-image-btn">改变图片</button>
+<hr/>
+<div id="container">
+<p>第一个子元素</p>
+</div>
+<button id="add-element-btn">添加元素</button>
+<button id="remove-element-btn">移除最后一个元素</button>
+<script src="07.js"></script>
+                    </div>
+                </div>
+                
+                <!-- 代码面板 -->
+                <div id="code-panel" class="panel">
+                    <div class="code-container">
+                        <pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;DOM 操作示例&lt;/title&gt;
+  &lt;style&gt;
+    .highlight { background-color: yellow; font-weight: bold; }
+    .hidden { display: none; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 id="main-title"&gt;DOM 操作&lt;/h1&gt;
+  &lt;p id="text-to-change"&gt;这是初始文本。&lt;/p&gt;
+  &lt;button id="change-text-btn"&gt;改变文本&lt;/button&gt;
+  &lt;button id="toggle-style-btn"&gt;切换样式&lt;/button&gt;
+  &lt;hr&gt;
+  &lt;img id="my-image" src="https://placehold.co/200x100/007bff/ffffff?text=Image+1" alt="占位图" width="200"&gt;
+  &lt;br&gt;
+  &lt;input type="text" id="image-url-input" placeholder="输入新图片 URL"&gt;
+  &lt;button id="change-image-btn"&gt;改变图片&lt;/button&gt;
+  &lt;hr&gt;
+  &lt;div id="container"&gt;
+    &lt;p&gt;第一个子元素&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button id="add-element-btn"&gt;添加元素&lt;/button&gt;
+  &lt;button id="remove-element-btn"&gt;移除最后一个元素&lt;/button&gt;
 
-  <script src="07.js"></script>
+  &lt;script src="07.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        <button class="copy-btn">复制代码</button>
+                    </div>
+                </div>
+                
+                <!-- 解释面板 -->
+                <div id="explanation-panel" class="panel">
+                    <h2>DOM 操作示例详解</h2>
+                    
+                    
+        <div class="explanation">
+            <h3>JavaScript代码解析</h3>
+            <p>本课程展示了JavaScript的基本语法和常用功能。</p>
+            <p>JavaScript是一种强大的编程语言，用于为网页添加交互功能。</p>
+        </div>
+        
+        <div class="explanation">
+            <h3>实践应用</h3>
+            <p>尝试修改代码，观察页面行为的变化。</p>
+            <p>通过实践，您将更好地理解JavaScript如何与网页交互。</p>
+        </div>
+        
+                </div>
+            </div>
+            
+            <!-- 课程导航 -->
+            <div class="lesson-nav">
+                <a href="06.html" class="nav-btn prev-btn">
+                    <i class="fas fa-chevron-left"></i> 上一课
+                </a>
+                <a href="08.html" class="nav-btn next-btn">
+                    下一课 <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../js/lesson.js"></script>
 </body>
 </html>

@@ -4,7 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS 基础</title>
-    <style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Prism.js for code highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="../css/lesson.css">
+</head>
+<body>
+    <div class="lesson-container">
+        <!-- 课程头部 -->
+        <div class="lesson-header">
+            <a href="../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> 返回主页
+            </a>
+            <h1 class="lesson-title">JS 基础</h1>
+            <p class="lesson-description">JavaScript编程的第6节内容，学习JS 基础相关知识</p>
+        </div>
+        
+        <!-- 课程内容 -->
+        <div class="lesson-content">
+            <!-- 选项卡 -->
+            <div class="tabs">
+                <button class="tab active" data-target="result-panel">效果展示</button>
+                <button class="tab" data-target="code-panel">查看代码</button>
+                <button class="tab" data-target="explanation-panel">详细解释</button>
+            </div>
+            
+            <!-- 选项卡内容 -->
+            <div class="tab-content">
+                <!-- 效果展示面板 -->
+                <div id="result-panel" class="panel active">
+                    <div class="result-container">
+                        <div class="container">
+
+<h1>查看浏览器控制台</h1>
+<script src="06.js"></script>
+</div>
+                    </div>
+                </div>
+                
+                <!-- 代码面板 -->
+                <div id="code-panel" class="panel">
+                    <div class="code-container">
+                        <pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;JS 基础&lt;/title&gt;
+    &lt;style&gt;
         body {
             font-family: sans-serif;
             line-height: 1.6;
@@ -44,13 +95,57 @@
             color: #fff;
             border-color: #007bff;
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <a href="../index.html" class="back-link">返回主导航</a>
-        <h1>查看浏览器控制台</h1>
-        <script src="06.js"></script>
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;a href="../index.html" class="back-link"&gt;返回主导航&lt;/a&gt;
+        &lt;h1&gt;查看浏览器控制台&lt;/h1&gt;
+        &lt;script src="06.js"&gt;&lt;/script&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        <button class="copy-btn">复制代码</button>
+                    </div>
+                </div>
+                
+                <!-- 解释面板 -->
+                <div id="explanation-panel" class="panel">
+                    <h2>JS 基础详解</h2>
+                    
+                    
+        <div class="explanation">
+            <h3>JavaScript代码解析</h3>
+            <p>本课程展示了JavaScript的基本语法和常用功能。</p>
+            <p>JavaScript是一种强大的编程语言，用于为网页添加交互功能。</p>
+        </div>
+        
+        <div class="explanation">
+            <h3>实践应用</h3>
+            <p>尝试修改代码，观察页面行为的变化。</p>
+            <p>通过实践，您将更好地理解JavaScript如何与网页交互。</p>
+        </div>
+        
+                </div>
+            </div>
+            
+            <!-- 课程导航 -->
+            <div class="lesson-nav">
+                <a href="05.html" class="nav-btn prev-btn">
+                    <i class="fas fa-chevron-left"></i> 上一课
+                </a>
+                <a href="07.html" class="nav-btn next-btn">
+                    下一课 <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
     </div>
+    
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../js/lesson.js"></script>
 </body>
 </html>
