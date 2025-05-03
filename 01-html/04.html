@@ -230,6 +230,19 @@
         
         // 激活对应的选项卡
         document.querySelector('button[onclick="showPanel(\'' + panelId + '\')"]').classList.add('active');
+    });
+        
+        // 移除所有选项卡的活动状态
+        var tabs = document.querySelectorAll('.tab');
+        tabs.forEach(function(tab) {
+            tab.classList.remove('active');
+        });
+        
+        // 显示选中的面板
+        document.getElementById(panelId).style.display = 'block';
+        
+        // 激活对应的选项卡
+        document.querySelector('button[onclick="showPanel(\'' + panelId + '\')"]').classList.add('active');
     }
     
     // 初始化显示第一个面板
