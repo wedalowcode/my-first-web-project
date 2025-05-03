@@ -31,9 +31,9 @@
         <div class="lesson-content">
             <!-- 选项卡 -->
             <div class="tabs">
-                <button class="tab active" data-target="result-panel">效果展示</button>
-                <button class="tab" data-target="code-panel">查看代码</button>
-                <button class="tab" data-target="explanation-panel">详细解释</button>
+                <button class="tab active" onclick="showPanel('result-panel')">效果展示</button>
+                <button class="tab" onclick="showPanel('code-panel')">查看代码</button>
+                <button class="tab" onclick="showPanel('explanation-panel')">详细解释</button>
             </div>
             <script>
                 console.log('选项卡已加载');
@@ -116,6 +116,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../js/tabs.js"></script>
     <script src="../js/lesson.js"></script>
     <script src="../js/sidebar-nav.js"></script>
 </body>

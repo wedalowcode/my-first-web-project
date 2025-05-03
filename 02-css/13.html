@@ -31,9 +31,9 @@
         <div class="lesson-content">
             <!-- 选项卡 -->
             <div class="tabs">
-                <button class="tab active" data-target="result-panel">效果展示</button>
-                <button class="tab" data-target="code-panel">查看代码</button>
-                <button class="tab" data-target="explanation-panel">详细解释</button>
+                <button class="tab active" onclick="showPanel('result-panel')">效果展示</button>
+                <button class="tab" onclick="showPanel('code-panel')">查看代码</button>
+                <button class="tab" onclick="showPanel('explanation-panel')">详细解释</button>
             </div>
             
             <!-- 选项卡内容 -->
@@ -123,7 +123,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../js/tabs.js"></script>
     <script src="../js/lesson.js"></script>
     <script src="../js/sidebar-nav.js"></script>
+
+    <script>
+    function showPanel(panelId) {
+        // 隐藏所有面板
+        var panels = document.querySelectorAll('.panel');
+        panels.forEach(function(panel) {
+            panel.style.display = 'none';
+        });
+        
+        // 移除所有选项卡的活动状态
+        var tabs = document.querySelectorAll('.tab');
+        tabs.forEach(function(tab) {
+            tab.classList.remove('active');
+        });
+        
+        // 显示选中的面板
+        document.getElementById(panelId).style.display = 'block';
+        
+        // 激活对应的选项卡
+        document.querySelector('button[onclick="showPanel(\'' + panelId + '\')"]').classList.add('active');
+    }
+    
+    // 初始化显示第一个面板
+    document.addEventListener('DOMContentLoaded', function() {
+        showPanel('result-panel');
+    });
+    </script>
 </body>
 </html>
