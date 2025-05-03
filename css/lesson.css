@@ -1,0 +1,81 @@
+/* 课程页面样式 */
+.lesson-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.lesson-header {
+    margin-bottom: 2rem;
+}
+
+.lesson-title {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.lesson-description {
+    color: var(--gray-color);
+    font-size: 1.1rem;
+}
+
+.lesson-content {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+/* 结果展示面板 */
+.result-container {
+    padding: 2rem;
+    border: 1px solid #eee;
+    border-radius: var(--border-radius);
+    background-color: white;
+}
+
+/* 代码面板 */
+.code-container {
+    position: relative;
+}
+
+.code-container pre {
+    margin: 0;
+    border-radius: 0;
+}
+
+/* 解释面板 */
+#explanation-panel {
+    padding: 2rem;
+}
+
+#explanation-panel h2 {
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .lesson-container {
+        padding: 1rem;
+    }
+    
+    .tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab {
+        flex: 1 0 auto;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    
+    .result-container {
+        padding: 1rem;
+    }
+    
+    #explanation-panel {
+        padding: 1rem;
+    }
+}
