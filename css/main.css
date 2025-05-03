@@ -42,14 +42,16 @@ a:hover {
 .page-container {
     display: flex;
     min-height: 100vh;
+    width: 100%;
 }
 
 /* 主内容区 */
 .main-content {
     flex: 1;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 课程卡片 */

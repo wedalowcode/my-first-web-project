@@ -1,6 +1,7 @@
 /* 侧边栏样式 */
 .sidebar {
     width: 280px;
+    min-width: 280px;
     background-color: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
     height: 100vh;

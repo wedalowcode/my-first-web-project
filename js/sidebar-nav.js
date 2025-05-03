@@ -178,8 +178,10 @@ function initSidebar() {
     const pageContainer = document.createElement('div');
     pageContainer.className = 'page-container';
     
-    // 将body的内容移动到新容器中
-    const bodyContent = document.body.innerHTML;
+    // 保存body的原始内容
+    const originalContent = document.body.innerHTML;
+    
+    // 清空body
     document.body.innerHTML = '';
     
     // 添加侧边栏
@@ -189,7 +191,9 @@ function initSidebar() {
     // 创建主内容区
     const mainContent = document.createElement('div');
     mainContent.className = 'main-content';
-    mainContent.innerHTML = bodyContent;
+    
+    // 将原始内容放入主内容区
+    mainContent.innerHTML = originalContent;
     pageContainer.appendChild(mainContent);
     
     // 添加到body
