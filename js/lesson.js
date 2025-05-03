@@ -6,8 +6,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabs = document.querySelectorAll('.tab');
     const panels = document.querySelectorAll('.panel');
     
+    console.log('找到选项卡:', tabs.length);
+    console.log('找到面板:', panels.length);
+    
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
+            console.log('点击选项卡:', tab.dataset.target);
+            
             // 移除所有活动状态
             tabs.forEach(t => t.classList.remove('active'));
             panels.forEach(p => p.classList.remove('active'));
@@ -15,8 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // 添加当前活动状态
             tab.classList.add('active');
             const panel = document.getElementById(tab.dataset.target);
+            console.log('目标面板:', panel);
             if (panel) {
                 panel.classList.add('active');
+            } else {
+                console.error('未找到面板:', tab.dataset.target);
             }
         });
     });
