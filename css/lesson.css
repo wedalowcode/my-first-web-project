@@ -98,7 +98,7 @@
 }
 
 .panel.active {
-    display: block;
+    display: block !important;
 }
 
 /* 复制按钮 */
