@@ -1,0 +1,124 @@
+/* 侧边栏样式 */
+.sidebar {
+    width: 280px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    margin-right: 20px;
+}
+
+.sidebar-header {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.sidebar-title {
+    font-size: 1.2rem;
+    margin: 0 0 5px 0;
+    color: #343a40;
+}
+
+.sidebar-description {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.sidebar-chapter-title {
+    font-size: 1rem;
+    margin: 15px 0 10px 0;
+    color: #343a40;
+    font-weight: 500;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.sidebar-nav-item {
+    margin-bottom: 5px;
+}
+
+.sidebar-nav-link {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    color: #343a40;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.sidebar-nav-link:hover {
+    background-color: #f8f9fa;
+    color: #3498db;
+}
+
+.sidebar-nav-link.active {
+    background-color: #e9f0ff;
+    color: #3498db;
+    font-weight: 500;
+}
+
+.sidebar-nav-link i {
+    margin-right: 8px;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.sidebar-nav-link.active i {
+    color: #3498db;
+}
+
+/* 移动端侧边栏切换按钮 */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background-color: #2980b9;
+}
+
+.sidebar-toggle.active {
+    transform: rotate(90deg);
+}
+
+/* 响应式样式 */
+@media (max-width: 992px) {
+    .with-sidebar {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        position: static;
+    }
+    
+    .sidebar-toggle {
+        display: block;
+    }
+}
