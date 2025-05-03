@@ -1,59 +1,125 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <title>CSS 引入方式示例</title>
-  <meta charset="utf-8">
-  <style>
-    body {
-      font-family: sans-serif;
-      line-height: 1.6;
-      margin: 2em;
-      background-color: #f4f4f4;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1 {
-      color: #333;
-      text-align: center;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 10px;
-    }
-    .back-link {
-      display: inline-block;
-      margin-bottom: 20px;
-      color: #007bff;
-      text-decoration: none;
-      padding: 5px 10px;
-      border: 1px solid #007bff;
-      border-radius: 4px;
-      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    }
-    .back-link:hover {
-      background-color: #007bff;
-      color: #fff;
-      border-color: #007bff;
-    }
-    /* 选择 h2 元素 */
-    h2 {
-      color: blue; /* 设置文字颜色为蓝色 */
-    }
-  </style>
-  <link rel="stylesheet" href="01.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 引入方式示例</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Prism.js for code highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/lesson.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
 </head>
 <body>
-  <div class="container">
-    <a href="../index.html" class="back-link">返回主导航</a>
+    <!-- 课程内容将由sidebar-nav.js包装到page-container中 -->
+    <div class="lesson-container">
+        <!-- 课程头部 -->
+        <div class="lesson-header">
+            <a href="../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> 返回主页
+            </a>
+            <h1 class="lesson-title">CSS 引入方式示例</h1>
+            <p class="lesson-description">学习Web开发的基础知识</p>
+        </div>
+        
+        <!-- 课程内容 -->
+        <div class="lesson-content">
+            <!-- 选项卡 -->
+            <div class="tabs">
+                <button class="tab active" data-target="result-panel">效果展示</button>
+                <button class="tab" data-target="code-panel">查看代码</button>
+                <button class="tab" data-target="explanation-panel">详细解释</button>
+            </div>
+            
+            <!-- 选项卡内容 -->
+            <div class="tab-content">
+                <!-- 效果展示面板 -->
+                <div id="result-panel" class="panel active">
+                    <div class="result-container">
+                        <a href="../index.html" class="back-link">返回主导航</a>
     <h1 style="color: red;">这是用内联样式设置的红色标题</h1>
 
   <h2>这是用内部样式表设置的蓝色标题</h2>
 
     <p>这是用外部样式表设置的绿色段落 (见 style.css)</p>
-  </div>
+                    </div>
+                </div>
+                
+                <!-- 代码面板 -->
+                <div id="code-panel" class="panel">
+                    <div class="code-container">
+                        <pre><code class="language-html"><a href="../index.html" class="back-link">返回主导航</a>
+    <h1 style="color: red;">这是用内联样式设置的红色标题</h1>
+
+  <h2>这是用内部样式表设置的蓝色标题</h2>
+
+    <p>这是用外部样式表设置的绿色段落 (见 style.css)</p></code></pre>
+                        <button class="copy-btn">复制代码</button>
+                    </div>
+                </div>
+                
+                <!-- 解释面板 -->
+                <div id="explanation-panel" class="panel">
+                    
+    <h2>HTML基础结构解析</h2>
+    
+    <div class="explanation">
+        <h3>文档类型声明</h3>
+        <p><code>&lt;!DOCTYPE html&gt;</code> - 这是HTML5的文档类型声明，告诉浏览器这是一个HTML文档。</p>
+    </div>
+    
+    <div class="explanation">
+        <h3>HTML元素</h3>
+        <p><code>&lt;html lang="zh-CN"&gt;</code> - 这是HTML文档的根元素，lang属性指定文档的语言为中文。</p>
+    </div>
+    
+    <div class="explanation">
+        <h3>头部信息</h3>
+        <p><code>&lt;head&gt;</code> - 包含文档的元数据，如标题、字符集、视口设置和样式。</p>
+        <ul>
+            <li><code>&lt;meta charset="UTF-8"&gt;</code> - 设置文档字符编码为UTF-8，支持各种语言字符。</li>
+            <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> - 设置视口，使网页在移动设备上正确显示。</li>
+            <li><code>&lt;title&gt;</code> - 设置网页标题，显示在浏览器标签上。</li>
+            <li><code>&lt;style&gt;</code> - 包含CSS样式规则，用于美化网页。</li>
+        </ul>
+    </div>
+    
+    <div class="explanation">
+        <h3>页面主体</h3>
+        <p><code>&lt;body&gt;</code> - 包含网页的可见内容。</p>
+        <ul>
+            <li><code>&lt;div class="container"&gt;</code> - 一个容器元素，用于组织内容并应用样式。</li>
+            <li><code>&lt;h1&gt;</code> - 一级标题，通常用于页面的主标题。</li>
+            <li><code>&lt;p&gt;</code> - 段落元素，用于显示文本内容。</li>
+        </ul>
+    </div>
+    
+                </div>
+            </div>
+            
+            <!-- 课程导航 -->
+            <div class="lesson-nav">
+                <a href="#" class="nav-btn prev-btn disabled">
+                    <i class="fas fa-chevron-left"></i> 上一课
+                </a>
+                <a href="02.html" class="nav-btn next-btn ">
+                    下一课 <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="../js/lesson.js"></script>
+    <script src="../js/sidebar-nav.js"></script>
 </body>
 </html>
